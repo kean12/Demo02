@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: shopcart-service
+  cloud:
+    stream:
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                addresses: amqp://127.0.0.1:5672
+                username: sa
+                password: 123456
+      bindings:
+        foo:
+          binder: rabbit
+          destination: test
+          content-type: application/json
+          group: shopcart
+          consumer:
+            concurrency: 2
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+server:
+  port: 8066

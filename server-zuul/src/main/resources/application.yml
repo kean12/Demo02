@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: server-zuul
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+server:
+  port: 8062
+endpoints: 
+  sensitive: false
+zuul:
+  ignored-services: 'commodity-service'
+  prefix: /api
+  routes:
+    commodity-service: '/commodity/**'
