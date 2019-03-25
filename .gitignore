@@ -1,0 +1,42 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+*.project
+commodity/.settings/
+*.classpath
+commodity-app/.settings/
+commodity-app/target/
+commodity-brand/.settings/
+commodity-brand/target/
+commodity-catalog/.settings/
+commodity-catalog/target/
+commodity-product/.settings/
+commodity-product/target/
+order-app/.settings/
+order-app/target/
+server-eureka/.settings/
+server-eureka/target/
+server-zuul/.settings/
+server-zuul/target/
+shopcart-app/.settings/
+shopcart-app/target/

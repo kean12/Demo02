@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: order-service
+  cloud:
+    stream:
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                addresses: amqp://mq.dev.zkh360.com:50017
+                username: zkhdev
+                password: zkhdev
+      bindings:
+        bar:
+          binder: rabbit
+          destination: test
+          content-type: application/json
+      rabbit:
+        binddings: 
+          bar: 
+            producer: 
+              transacted: true
+server:
+  port: 8064
